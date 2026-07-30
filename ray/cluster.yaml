@@ -12,5 +12,3 @@ spec:
       replicas: 3
       minReplicas: 3
       maxReplicas: 20
-      rayStartParams:
-        num-cpus: "4"
