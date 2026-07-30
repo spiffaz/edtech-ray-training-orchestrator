@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: RayCluster
+metadata:
+  name: ray-edtech
+spec:
+  headGroupSpec:
+    rayStartParams:
+      dashboard-host: "0.0.0.0"
+      port: "6379"
+  workerGroupSpecs:
+    - groupName: cpu-workers
+      replicas: 3
+      minReplicas: 3
+      maxReplicas: 20
+      rayStartParams:
+        num-cpus: "4"
